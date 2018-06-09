@@ -33,18 +33,20 @@ public class MainActivity extends AppCompatActivity {
         double n1 = Double.parseDouble(editText.getText().toString());
         double n2 = Double.parseDouble(editText2.getText().toString());
         String valor = spinner.getSelectedItem().toString();
-        if (valor.equals("sumar")) {
-            result = n1 + n2;
-        } else if (valor.equals("restar")) {
-            result = n1 - n2;
-        } else if (valor.equals("multiplicar")) {
-            result = n1 * n2;
-        } else {
-            if (n2 == 0)
-                result = 0;
-            else
+        try {
+            if (valor.equals("sumar")) {
+                result = n1 + n2;
+            } else if (valor.equals("restar")) {
+                result = n1 - n2;
+            } else if (valor.equals("multiplicar")) {
+                result = n1 * n2;
+            } else {
                 result = n1 / n2;
+            }
+            textView.setText(String.valueOf(result));
+        } catch (ArithmeticException a) {
+            textView.setText("ERROR");
         }
-        textView.setText(String.valueOf(result));
+
     }
 }

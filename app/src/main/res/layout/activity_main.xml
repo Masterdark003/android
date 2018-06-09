@@ -14,7 +14,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="ingrese el primer número"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal|numberSigned" />
 
     <EditText
         android:id="@+id/editText2"
@@ -22,12 +22,13 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="ingrese el segundo número"
-        android:inputType="number" />
+        android:inputType="numberDecimal|numberSigned" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button"
