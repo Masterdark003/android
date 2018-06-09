@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void operar(View view) {
-        long result;
-        long n1 = Long.parseLong(editText.getText().toString());
-        long n2 = Long.parseLong(editText2.getText().toString());
+        double result;
+        double n1 = Double.parseDouble(editText.getText().toString());
+        double n2 = Double.parseDouble(editText2.getText().toString());
         String valor = spinner.getSelectedItem().toString();
         if (valor.equals("sumar")) {
             result = n1 + n2;
